@@ -1,0 +1,24 @@
+{
+  "name": "meeting-manager",
+  "version": "1.0.0",
+  "description": "Gerenciador de reuniões com JS. Atividade de JS da trilha de aprendizado - Compass",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wandreus-muhl/meeting-manager-js.git"
+  },
+  "keywords": [],
+  "author": "Wandreus Mühl Dourado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wandreus-muhl/meeting-manager-js/issues"
+  },
+  "homepage": "https://github.com/wandreus-muhl/meeting-manager-js#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "localStorage": "^1.0.4"
+  }
+}
