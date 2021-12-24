@@ -10,8 +10,8 @@ app.use(express.urlencoded({
 }))
 
 // Importando rotas
-// const routes = require('./routes')
-// app.use(routes)
+const routes = require('./routes')
+app.use(routes)
 
 // Iniciando servidor
 app.listen(process.env.API_PORT || 3000, () => {

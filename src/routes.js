@@ -5,5 +5,6 @@ const router = express.Router()
 const meetController = require('./controllers/meetController')
 
 // Rotas
+router.get('/meet', meetController.listMeetings)
 
 module.exports = router
