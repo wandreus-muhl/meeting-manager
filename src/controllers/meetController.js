@@ -1,14 +1,15 @@
 const localStorage = require('localStorage')
 
 exports.listMeetings = (req, res) => {
+    // Busca as reuniões armazenadas no localStorage
     const meetings = JSON.parse(localStorage.getItem('meetings'))
-    if(!meetings) {
+    if(!meetings) { // Verifica se há reuniões armazenadas
         res.send({
             'message': 'Não há reuniões agendadas'
         })
     } else {
         res.send({
-            'reuniões': meetings 
+            meetings 
         })
     }
 }
@@ -31,3 +32,4 @@ exports.addMeetings = (req, res) => {
         meetings 
     })
 }
+
