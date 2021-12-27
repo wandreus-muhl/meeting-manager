@@ -6,5 +6,6 @@ const meetController = require('./controllers/meetController')
 
 // Rotas
 router.get('/meet', meetController.listMeetings)
+router.post('/meet', meetController.addMeetings)
 
 module.exports = router
