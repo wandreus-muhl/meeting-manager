@@ -28,3 +28,5 @@ Essa API conta com funcionalidades básicas para o gerenciamento de objetos, den
     ~~~
     Após a requisição ser feita, o controlador atribui um ID para a reunião, o qual é a sequência do ID da última reunião cadastrada
 - Exclusão de reuniões: essa funcionalidade pode ser realizada através da rota `/meet/:meet_id`, onde `:meet_id` representa o ID da reunião a ser excluída.
+
+O endereço completo para as rotas é: `https://localhost:<API_PORT>/<rota>`.
