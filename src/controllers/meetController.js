@@ -20,7 +20,12 @@ exports.addMeetings = (req, res) => {
 
     // Controle do objeto
     const meet = req.body
-    meet.id = meetings.length + 1 // Adiciona um ID ao objeto informado
+    // Adiciona um ID ao objeto informado
+    if(meetings.length === 0) {
+        meet.id = 1
+    } else {
+        meet.id = (meetings[meetings.length - 1].id) + 1 
+    }
 
     // Adiciona o corpo da requisição ao array de reuniões
     meetings.push(req.body)
