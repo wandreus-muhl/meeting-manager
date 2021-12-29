@@ -49,7 +49,7 @@ exports.deleteMeetings = (req, res) => {
         })
     } else {
         aux = meetings.filter(meeting => meeting.id !== parseInt(meetingId))
-        localStorage.setItem('meetings', JSON.stringify(meetings))
+        localStorage.setItem('meetings', JSON.stringify(aux))
 
         res.send(aux)
     }
