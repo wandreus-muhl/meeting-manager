@@ -39,8 +39,10 @@ exports.addMeetings = (req, res) => {
 }
 
 exports.deleteMeetings = (req, res) => {
+    // Busca as reuniões guardadas no localStorage
     const meetingId = parseInt(req.params.id)
 
+    // Converte a string armazenada em objeto
     let meetings = JSON.parse(localStorage.getItem('meetings'))
 
     if (!meetings) {
@@ -48,6 +50,7 @@ exports.deleteMeetings = (req, res) => {
             'message': 'Não há reuniões agendadas'
         })
     } else {
+        // Filtra as reuniões, comparando os IDs com o ID informado
         aux = meetings.filter(meeting => meeting.id !== parseInt(meetingId))
         localStorage.setItem('meetings', JSON.stringify(aux))
 
