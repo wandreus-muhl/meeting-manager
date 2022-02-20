@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 // Importando controladores
-const meetController = require('./controllers/meetController')
+const meetController = require('./app/controllers/MeetController')
 
 // Rotas
 router.get('/meet', meetController.listMeetings)
