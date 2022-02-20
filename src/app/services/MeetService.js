@@ -1,5 +1,5 @@
 const uuid = require('uuid')
-const MeetingRepository = require('../repositories/MeetRepository');
+const MeetingRepository = require('../repositories/MeetRepository')
 
 class MeetingService {
   async create(payload) {
@@ -7,6 +7,10 @@ class MeetingService {
     const result = await MeetingRepository.create(payload)
     return result
   }
+  async findAll() {
+    const result = await MeetingRepository.findAll()
+    return result
+  }
 }
 
-module.exports = new MeetingService();
+module.exports = new MeetingService()
