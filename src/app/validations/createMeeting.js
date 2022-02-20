@@ -12,7 +12,6 @@ module.exports = async (req, res, next) => {
     })
     if (result.error) {
       error = result.error
-      console.log('#############', error)
       throw error
     }
     return next()

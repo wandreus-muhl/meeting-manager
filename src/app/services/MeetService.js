@@ -15,6 +15,10 @@ class MeetingService {
     const result = await MeetingRepository.findOne(payload)
     return result
   }
+  async delete(payload) {
+    const result = await MeetingRepository.delete(payload)
+    return result
+  }
 }
 
 module.exports = new MeetingService()
