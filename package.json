@@ -4,8 +4,8 @@
   "description": "Gerenciador de reuniões com JS. Atividade de JS da trilha de aprendizado - Compass",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "start:dev": "nodemon src/server.js"
+    "start": "docker-compose up -d && node src/server.js",
+    "start:dev": "docker-compose up -d && nodemon src/server.js"
   },
   "repository": {
     "type": "git",

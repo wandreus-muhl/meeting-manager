@@ -16,4 +16,4 @@ class Database {
   }
 }
 
-module.exports = new Database.connect()
+module.exports = new Database().connect()

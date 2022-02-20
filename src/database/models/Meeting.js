@@ -1,18 +1,19 @@
-module.exports = (connection, sequelize) => {
+module.exports = (connection, Sequelize) => {
   const Meeting = connection.define('meetings', {
     id: {
-      type: sequelize.UUID,
+      type: Sequelize.UUID,
+      defaultValue: Sequelize.UUIDV4,
       allowNull: false,
       primaryKey: true
     },
     title: {
-      type: sequelize.STRING
+      type: Sequelize.STRING
     },
     description: {
-
+      type: Sequelize.STRING
     },
     datetime: {
-      type: sequelize.DATE
+      type: Sequelize.DATE
     }
   }, {
     underscored: true

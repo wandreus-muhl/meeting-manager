@@ -1,12 +1,12 @@
 const {
-  sequelize
-} = require('sequelize')
+  Sequelize
+} = require('Sequelize')
 const connection = require('../../database')
 
 const database = {}
-database.sequelize = sequelize
+database.Sequelize = Sequelize
 database.connection = connection
 
-database.Meeting = require('./Meeting')(connection, sequelize)
+database.Meeting = require('./Meeting')(connection, Sequelize)
 
 module.exports = database
