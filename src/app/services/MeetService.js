@@ -11,6 +11,10 @@ class MeetingService {
     const result = await MeetingRepository.findAll()
     return result
   }
+  async findOne(payload) {
+    const result = await MeetingRepository.findOne(payload)
+    return result
+  }
 }
 
 module.exports = new MeetingService()

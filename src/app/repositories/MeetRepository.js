@@ -7,6 +7,9 @@ class MeetingRepository  {
   async findAll() {
     return models.Meeting.findAll()
   }
+  async findOne(payload) {
+    return models.Meeting.findByPk(payload.meetingId)
+  }
 }
 
 module.exports = new MeetingRepository()

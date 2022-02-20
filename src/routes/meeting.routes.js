@@ -4,5 +4,6 @@ const createMeetingValidation = require('../app/validations/createMeeting')
 module.exports = (server, routes, prefix = '/meeting') => {
   routes.post('/', createMeetingValidation, meetingController.create)
   routes.get('/', meetingController.findAll)
+  routes.get('/:meetingId', meetingController.findOne)
   server.use(prefix, routes)
 }
